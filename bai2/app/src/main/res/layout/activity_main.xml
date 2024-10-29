@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Navigation Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#D32F2F"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Inbox"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Selection Instruction Banner -->
+    <TextView
+        android:id="@+id/selectionBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="#E0E0E0"
+        android:padding="10dp"
+        android:text="Touch a sender image to select that conversation."
+        android:textColor="#757575"
+        android:textSize="14sp" />
+
+    <!-- RecyclerView for Email List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEmails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selectionBanner"
+        android:paddingTop="4dp"
+        android:paddingBottom="70dp"
+        android:clipToPadding="false" />
+
+    <!-- Compose Button as Emoji -->
+    <TextView
+        android:id="@+id/fabCompose"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+
+        android:gravity="center"
+        android:text="🖋️"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

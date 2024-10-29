@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="currency_codes">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>GBP</item>
+        <item>AUD</item>
+        <!-- Add more currencies as needed -->
+    </string-array>
+
+</resources>

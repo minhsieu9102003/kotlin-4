@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Profile Emoji (Circle Background) -->
+    <TextView
+        android:id="@+id/emailIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+
+    android:gravity="center"
+    android:text="👤"
+    android:textColor="#FFFFFF"
+    android:textSize="18sp" />
+
+    <!-- Sender Name -->
+    <TextView
+        android:id="@+id/emailSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/emailIcon"
+        android:layout_marginStart="8dp"
+        android:text="Sender Name"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Email Subject -->
+    <TextView
+        android:id="@+id/emailSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/emailIcon"
+        android:layout_below="@id/emailSender"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="Email Subject"
+        android:textColor="#757575"
+        android:textSize="14sp" />
+
+    <!-- Email Time and Star Emoji -->
+    <TextView
+        android:id="@+id/emailTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="12:45 PM ⭐"
+        android:textColor="#757575"
+        android:textSize="14sp" />
+</RelativeLayout>

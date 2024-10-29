@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Source Amount EditText -->
+    <EditText
+        android:id="@+id/sourceAmountEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sourceCurrencySpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:padding="16dp"/>
+
+    <!-- Source Currency Spinner -->
+    <Spinner
+        android:id="@+id/sourceCurrencySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/sourceAmountEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sourceAmountEditText"
+        android:entries="@array/currency_codes"
+        android:padding="16dp"/>
+
+    <!-- Target Amount EditText -->
+    <EditText
+        android:id="@+id/targetAmountEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Converted amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/sourceAmountEditText"
+        app:layout_constraintEnd_toStartOf="@id/targetCurrencySpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:padding="16dp"/>
+
+    <!-- Target Currency Spinner -->
+    <Spinner
+        android:id="@+id/targetCurrencySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/targetAmountEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/targetAmountEditText"
+        android:entries="@array/currency_codes"
+        android:padding="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
